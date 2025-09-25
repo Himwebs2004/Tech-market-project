@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGamer Marketplace | Gaming PCs & Laptops</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="css/2styles.css">
+    <link rel="icon" href="images/logo.png"><!-- Logo n'est pas disponible  -->
+</head>
+<body>
+    <!-- The Full code By Radhwane Harres  -->
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>TechPro</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#Products">Products</a></li>
+                        <li><a href="#Features">Features</a></li>
+                        <li><a href="#Vendor-Portal">Dashboard</a></li>
+                        <li><a href="#Support">Footer</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search products...">
+                    </div>
+                    <button class="btn btn-outline">Login</button>
+                    
+                    <!-- User Button -->
+                    <button id="user-btn" class="icon-btn">
+                        <i class="fas fa-user"></i>
+                    </button>
+
+                    <button class="icon-btn" id="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="icon-btn" id="wishlist-btn">
+                        <i class="fas fa-heart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Backdrop overlay -->
+        <div id="popover-backdrop" class="popover-backdrop"></div>
+
+        <!-- User Info Popover -->
+        <div id="user-info" class="user-popover">
+            <button class="close-btn">&times;</button>
+            <h3>Warning</h3>
+            <p>You must login to access this feature</p>
+            <button class="btn">Login Now</button>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional <strong>Computing Solutions</strong></h1>
+                <p>Premium workstations, high-performance gaming rigs, and enterprise-grade hardware for professionals who demand excellence.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="location.href='#Products'">Explore Products</button>
+                    <button class="btn btn-outline" onclick="location.href='#Vendor-Portal'">Consultation Service</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container" id="Features">
+        <h2 class="section-title">Why TechPro?</h2>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Enterprise-Grade Support</h3>
+                <p>24/7 professional support with guaranteed response times and on-site service options.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Extended Warranties</h3>
+                <p>Comprehensive protection plans with accident coverage and expedited replacement.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Custom Configuration</h3>
+                <p>Tailor your system with our experts to meet your specific performance requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container" id="Products">
+        <h2 class="section-title">Featured Systems</h2>
+        
+        <div class="filters">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="category">Category</label>
+                    <select id="category">
+                        <option>All Categories</option>
+                        <option>Workstations</option>
+                        <option>Gaming Systems</option>
+                        <option>Servers</option>
+                        <option>Accessories</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price">Price Range</label>
+                    <select id="price">
+                        <option>All Prices</option>
+                        <option>Under $1,000</option>
+                        <option>$1,000 - $2,500</option>
+                        <option>$2,500 - $5,000</option>
+                        <option>Over $5,000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="brand">Brand</label>
+                    <select id="brand">
+                        <option>All Brands</option>
+                        <option>Dell</option>
+                        <option>HP</option>
+                        <option>Lenovo</option>
+                        <option>ASUS</option>
+                        <option>Apple</option>
+                    </select>
+                </div>
+            </div>
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="cpu">Processor</label>
+                    <select id="cpu">
+                        <option>Any CPU</option>
+                        <option>Intel Core i5</option>
+                        <option>Intel Core i7</option>
+                        <option>Intel Core i9</option>
+                        <option>AMD Ryzen 5</option>
+                        <option>AMD Ryzen 7</option>
+                        <option>AMD Ryzen 9</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="ram">RAM</label>
+                    <select id="ram">
+                        <option>Any RAM</option>
+                        <option>8 GB</option>
+                        <option>16 GB</option>
+                        <option>32 GB</option>
+                        <option>64 GB+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="storage">Storage</label>
+                    <select id="storage">
+                        <option>Any Storage</option>
+                        <option>256 GB SSD</option>
+                        <option>512 GB SSD</option>
+                        <option>1 TB SSD</option>
+                        <option>2 TB+ SSD</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="products" id="products-container">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="container" id="Vendor-Portal">
+        <h2 class="section-title">Vendor Portal</h2>
+        <div class="dashboard">
+            <div class="dashboard-tabs">
+                <div class="tab active" onclick="switchTab('inventory')">Inventory Management</div>
+                <div class="tab" onclick="switchTab('sales')">Sales Analytics</div>
+                <div class="tab" onclick="switchTab('promotions')">Promotions</div>
+                <div class="tab" onclick="switchTab('performance')">Performance Metrics</div>
+            </div>
+            
+            <div id="inventory" class="tab-content active">
+                <h3>Manage Your Products</h3>
+                <p>Add, edit, or remove products from your inventory. Track stock levels and pricing.</p>
+                <button class="btn btn-primary">Add New Product</button>
+                <div class="inventory-stats">
+                    <div class="stat-card">
+                        <h4>Total Products</h4>
+                        <p class="stat-number">42</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Low Stock</h4>
+                        <p class="stat-number">3</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Out of Stock</h4>
+                        <p class="stat-number">1</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="sales" class="tab-content">
+                <h3>Sales Analytics</h3>
+                <p>View your revenue, orders, and best-selling items. Track your store performance.</p>
+                <button class="btn btn-primary">View Reports</button>
+                <div class="sales-chart">
+                    <canvas id="salesChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+            
+            <div id="promotions" class="tab-content">
+                <h3>Create Promotions</h3>
+                <p>Set up flash sales, coupons, and bundle offers to attract more customers.</p>
+                <button class="btn btn-primary">Create Promotion</button>
+            </div>
+            
+            <div id="performance" class="tab-content">
+                <h3>Performance Metrics</h3>
+                <p>Monitor your store's performance with detailed analytics and conversion metrics.</p>
+                <button class="btn btn-primary">View Full Analytics</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container" id="Support">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>TechPro</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enterprise Solutions</h3>
+                    <ul>
+                        <li><a href="#">Business Store</a></li>
+                        <li><a href="#">Volume Licensing</a></li>
+                        <li><a href="#">IT Professional Services</a></li>
+                        <li><a href="#">Education Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Technical Support</a></li>
+                        <li><a href="#">Driver Downloads</a></li>
+                        <li><a href="#">Warranty Services</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 TechPro Marketplace. All rights reserved. By <strong>Radhwane Harres</strong></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-login">&times;</span>
+            <h2>Login to Your Account</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 20px;">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="mobile-bottom-nav">
+        <a href="#hero" class="nav-item active">
+            <i class="fas fa-home nav-icon"></i>
+            <span>Home</span>
+        </a>
+        <a href="#Products" class="nav-item">
+            <i class="fas fa-laptop nav-icon"></i>
+            <span>Products</span>
+        </a>
+        <a href="#Features" class="nav-item">
+            <i class="fas fa-star nav-icon"></i>
+            <span>Features</span>
+        </a>
+        <a href="#Vendor-Portal" class="nav-item">
+            <i class="fas fa-chart-line nav-icon"></i>
+            <span>Dashboard</span>
+        </a>
+        <a href="#Support" class="nav-item">
+            <i class="fas fa-user nav-icon"></i>
+            <span>Account</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/Homepage.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
+    <!-- The full code by Radhwane Harres -->
